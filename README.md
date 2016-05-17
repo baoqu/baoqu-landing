@@ -1,14 +1,13 @@
 # baoqu-landing
 
-A Clojure library designed to ... well, that part is up to you.
+This is the landing page of the Baoqu project
 
-## Usage
+## Run the development environment
 
-FIXME
+Clone the repository and inside its folder, run:
 
-## License
+```sh
+lein run
+```
 
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+and go to http://localhost:3030
