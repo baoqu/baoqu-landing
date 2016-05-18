@@ -6,7 +6,8 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [funcool/catacumba "0.15.0"]
                  [hiccup "1.0.5"]
-                 [org.clojure/clojurescript "1.8.51"]]
+                 [org.clojure/clojurescript "1.8.51"]
+                 [rum "0.8.3"]]
   :main baoqu-landing.core
   :plugins [[lein-cljsbuild "1.1.3"]]
   :cljsbuild {:builds
