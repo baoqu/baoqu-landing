@@ -1,3 +1,217 @@
+/* #Reset & Basics (Inspired by E. Meyers)
+==================================================*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+select {
+  -webkit-appearance:none
+}
+
+/* Input firefox */
+
+input {
+  &:invalid, &:-moz-submit-invalid, &:required, &:optional, &:-moz-placeholder {
+    box-shadow: none;
+  }
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+/* SCAFFOLDING */
 html {
-    color: red
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: "sourcesanspro", sans-serif;
+}
+
+.container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Buttons */
+
+.btn {
+  align-items: stretch;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  font-family: "sourcesanspro", sans-serif;
+  font-size: $fs16;
+  font-weight: bold;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &.btn-big {
+    padding: 2rem 1rem;
+  }
+  &.btn-noshr {
+    flex-shrink: 0;
+  }
+  &.btn-small {
+    font-size: $fs18;
+    padding: .7rem 1rem;
+    line-height: 1.15;
+  }
+  span {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  align-items: center;
+  background: $color-primary;
+  color: $color-white;
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
+  &:hover {
+    background: $color-primary-dark;
+    color: $color-white;
+  }
 }
