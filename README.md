@@ -4,10 +4,10 @@ This is the landing page of the Baoqu project
 
 ## Run the development environment
 
-Clone the repository and inside its folder, run this to recompile the `ClojureScript` code:
+Clone the repository and inside its folder, run this to start watching the `ClojureScript` code:
 
 ```sh
-lein cljsbuild once
+lein cljsbuild auto
 ```
 
 and this to run the server:
