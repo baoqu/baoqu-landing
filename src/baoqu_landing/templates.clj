@@ -14,10 +14,7 @@
      [:div.mod-principal
       [:h1 "Baoqu"]
       [:h2 "Let's find out the ideas we share, no matter how many we are"]
-      [:div.form-box
-        [:input {:placeholder "Leave us your email here"} ]
-        [:button.btn "Join the conversation"]
-      ]
+      [:div#form]
       [:p "Baoqu is an Open Source for horizontal deliberation in massive groups in a whole new way. Yeah, new, belive us."]
       [:div "Mapping the conversation"]
       [:div "Trolling resilient"]

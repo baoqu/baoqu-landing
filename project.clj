@@ -7,7 +7,8 @@
                  [funcool/catacumba "0.15.0"]
                  [hiccup "1.0.5"]
                  [org.clojure/clojurescript "1.8.51"]
-                 [rum "0.8.3"]]
+                 [rum "0.8.3"]
+                 [funcool/httpurr "0.6.0"]]
   :main baoqu-landing.core
   :plugins [[lein-cljsbuild "1.1.3"]]
   :cljsbuild {:builds
