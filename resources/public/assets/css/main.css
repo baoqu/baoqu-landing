@@ -158,9 +158,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  font-family: "sourcesanspro", sans-serif;
+  font-family: 'Open Sans', georgia;
 }
-
+/*
 .container {
   width: 100%;
   flex: 1;
@@ -168,50 +168,126 @@ html {
   flex-direction: row;
   align-items: stretch;
 }
+*/
 
-/* Buttons */
+/* MOD PRINCIPAL */
+
+.mod-principal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 5rem;
+  color: #000;
+  background: white;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+}
+h1 {
+  font-family: "sourcesanspro", sans-serif;
+  color: #029DBF;
+}
+h2 {
+  font-size: 3.4rem;
+  letter-spacing: 2px;
+  line-height: 120%;
+  font-weight: 100;
+  max-width: 60rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Form */
+.form-box {
+  display: flex;
+}
+input {
+  border: 2px solid #000;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  height: 3.4rem;
+  width: 30%;
+}
+input:focus {
+  border-color: #029DBF;
+}
 
 .btn {
   align-items: stretch;
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   display: flex;
-  font-family: "sourcesanspro", sans-serif;
-  font-size: $fs16;
+  font-size: 1.6rem;
   font-weight: bold;
   justify-content: center;
-  padding: 0.4rem 0.8rem;
   text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  &.btn-big {
-    padding: 2rem 1rem;
-  }
-  &.btn-noshr {
-    flex-shrink: 0;
-  }
-  &.btn-small {
-    font-size: $fs18;
-    padding: .7rem 1rem;
-    line-height: 1.15;
-  }
-  span {
-    text-align: center;
-    width: 100%;
-  }
+  background-color: #029DBF;
+  color: white;
+  margin-left: 1rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  height: 3.4rem;
+}
+.btn:hover {
+  background-color: black;
 }
 
-.btn-primary {
-  @extend %btn;
-  align-items: center;
-  background: $color-primary;
-  color: $color-white;
-  justify-content: center;
-  display: flex;
-  padding: 1rem;
-  &:hover {
-    background: $color-primary-dark;
-    color: $color-white;
-  }
+
+                    @media (max-width: 1366px) {
+                      .login {
+                        width: 70%; }
+                        .login .input-box input {
+                          font-size: 1.25rem; } }
+
+                          @media (max-width: 960px) {
+                            .login {
+                              width: 90%; }
+                              .login h2 {
+                                font-size: 2.375rem;
+                                margin-bottom: 1rem; }
+                                .login h3 {
+                                  font-size: 1.25rem; }
+                                  .login .input-box {
+                                    margin-top: 2rem; }
+                                    .login .input-box input {
+                                      font-size: 1rem;
+                                      width: 60%; }
+                                      .login .input-box button {
+                                        width: 30%; } }
+
+                                        @media (max-width: 480px) {
+                                          .login {
+                                            width: 90%; }
+                                            .login h2 {
+                                              font-size: 1.875rem; }
+                                              .login h3 {
+                                                font-size: 1rem; }
+                                                .login .input-box {
+                                                  -webkit-flex-direction: column;
+                                                  -ms-flex-direction: column;
+                                                  flex-direction: column; }
+                                                  .login .input-box input {
+                                                    font-size: 1rem;
+                                                    width: 100%;
+                                                    margin-bottom: 1rem; }
+                                                    .login .input-box button {
+                                                      width: 100%;
+                                                      margin-left: 0; } }
+
+
+/* */
+.logo {
+  background: transparent url("../icons/baoqu-logo.svg") no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 1rem;
+  margin-right: 0.5rem;
+  min-width: 32px;
+  background-color: #0091C1;
+  position: absolute;
+  z-index: 10;
 }

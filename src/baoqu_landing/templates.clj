@@ -7,11 +7,17 @@
    [:html
     [:head
      [:title "Baoqu"]
-     [:link {:rel "stylesheet" :href "/assets/css/main.css"}]]
+     [:link {:rel "stylesheet" :href "/assets/css/main.css"}]
+     [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans"}]]
     [:body
-     [:div
-      [:h1 "Baoqu Landing"]
+      [:span.logo]
+     [:div.mod-principal
+      [:h1 "Baoqu"]
       [:h2 "Let's find out the ideas we share, no matter how many we are"]
+      [:div.form-box
+        [:input {:placeholder "Leave us your email here"} ]
+        [:button.btn "Join the conversation"]
+      ]
       [:p "Baoqu is an Open Source for horizontal deliberation in massive groups in a whole new way. Yeah, new, belive us."]
       [:div "Mapping the conversation"]
       [:div "Trolling resilient"]
