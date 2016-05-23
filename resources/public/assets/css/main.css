@@ -1,3 +1,5 @@
+* { box-sizing: border-box }
+
 /* #Reset & Basics (Inspired by E. Meyers)
 ==================================================*/
 a,
@@ -101,9 +103,6 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
 
 ol,
 ul {
@@ -158,7 +157,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  font-family: 'Open Sans', georgia;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4rem;
 }
 /*
 .container {
@@ -170,25 +170,43 @@ html {
 }
 */
 
-/* MOD PRINCIPAL */
+/* MODS */
 
 .mod-principal {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  min-height: 90%;
   padding: 5rem;
+  padding-bottom: 0;
   color: #000;
   background: white;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;*/
+  display: flex;
+}
+.mod-secondary {
+  padding: 5rem;
+  background: #eee;
+  display: flex;
+}
+.mod-principal .hero-unit {
+  margin-right: 1rem;
+}
+.mod-principal .device {
+  background-color: #029DBF;
+  min-width: 15rem;
+}
+
+/* */
+.logo {
+  background: transparent url("../icons/baoqu-logo.svg") no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  min-width: 32px;
+  background-color: #0091C1;
+  z-index: 10;
 }
 h1 {
   font-family: "sourcesanspro", sans-serif;
   color: #029DBF;
+  display: inline-block;
 }
 h2 {
   font-size: 3.4rem;
@@ -203,19 +221,21 @@ h2 {
 /* Form */
 .form-box {
   display: flex;
+  position: relative;
 }
-input {
-  border: 2px solid #000;
+.form-box input {
+  border: 2px solid #AAA;
+  border-radius: 8px;
   font-size: 1.6rem;
   padding: 1.6rem;
-  height: 3.4rem;
-  width: 30%;
+  height: 4.2rem;
+  width: 100%;
 }
-input:focus {
+.form-box input:focus {
   border-color: #029DBF;
 }
 
-.btn {
+.form-box .btn {
   align-items: stretch;
   border: none;
   cursor: pointer;
@@ -226,13 +246,29 @@ input:focus {
   text-align: center;
   background-color: #029DBF;
   color: white;
-  margin-left: 1rem;
+  margin-left: 0rem;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   height: 3.4rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  border-radius: 6px;
 }
-.btn:hover {
+.form-box .btn:hover {
   background-color: black;
+}
+.hint {
+  color: #999;
+  padding-top: 1rem;
+  font-size: 100%;
+}
+.links {
+  padding-top: 1rem;
+}
+.links a {
+  color: #029DBF;
+  margin-right: 1rem;
 }
 
 
@@ -276,18 +312,3 @@ input:focus {
                                                     .login .input-box button {
                                                       width: 100%;
                                                       margin-left: 0; } }
-
-
-/* */
-.logo {
-  background: transparent url("../icons/baoqu-logo.svg") no-repeat;
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-  margin: 1rem;
-  margin-right: 0.5rem;
-  min-width: 32px;
-  background-color: #0091C1;
-  position: absolute;
-  z-index: 10;
-}
