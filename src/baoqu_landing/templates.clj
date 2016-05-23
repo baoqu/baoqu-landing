@@ -23,8 +23,12 @@
             [:a.twitter "Twitter"]
             [:a.github "Github"]
           ]]
-        [:div.device "device"
-        ]]
+        [:div.device
+          [:ul.mobile
+            [:li.screen.ideas]
+            [:li.screen.map]
+            [:li.screen.comments]
+          ]]]
       [:div.mod-secondary
         [:p "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Yeah, new, belive us."]
         [:ul.benefits

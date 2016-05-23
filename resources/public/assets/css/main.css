@@ -173,7 +173,6 @@ html {
 /* MODS */
 
 .mod-principal {
-  min-height: 90%;
   padding: 5rem;
   padding-bottom: 0;
   color: #000;
@@ -186,22 +185,39 @@ html {
   display: flex;
 }
 .mod-principal .hero-unit {
-  margin-right: 1rem;
+  margin-right: 10%;
+  max-width: 60rem;
 }
 .mod-principal .device {
-  background-color: #029DBF;
   min-width: 15rem;
+}
+.device .mobile {
+  background: transparent url("../img/mobile.png") no-repeat;
+  width: 300px;
+  height: 520px;
+  background-size: 300px auto;
+  position: relative;
+}
+.device .mobile .screen {
+  background: red url("../img/mobile-ideas.png") no-repeat;
+  width: 258px;
+  height: 430px;
+  background-size: 258px 430px;
+  position: absolute;
+  top: 74px;
+  left: 22px;
 }
 
 /* */
 .logo {
-  background: transparent url("../icons/baoqu-logo.svg") no-repeat;
+  background: transparent url("../icons/baoqu-logo-blue.svg") no-repeat;
   height: 32px;
   width: 32px;
   display: inline-block;
   min-width: 32px;
-  background-color: #0091C1;
   z-index: 10;
+  margin-bottom: -0.2rem;
+  margin-right: 0.5rem;
 }
 h1 {
   font-family: "sourcesanspro", sans-serif;
@@ -213,7 +229,6 @@ h2 {
   letter-spacing: 2px;
   line-height: 120%;
   font-weight: 100;
-  max-width: 60rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -224,7 +239,7 @@ h2 {
   position: relative;
 }
 .form-box input {
-  border: 2px solid #AAA;
+  border: 2px solid #ced7de;
   border-radius: 8px;
   font-size: 1.6rem;
   padding: 1.6rem;
