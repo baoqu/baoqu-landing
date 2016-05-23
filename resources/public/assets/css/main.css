@@ -159,6 +159,7 @@ html {
   align-items: stretch;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4rem;
+  background-color: #f5f8fa;
 }
 /*
 .container {
@@ -178,21 +179,26 @@ html {
   color: #000;
   background: white;
   display: flex;
+  flex-wrap: wrap;
   min-height: 40rem;
+  background-color: #fff;
+}
+.mod-principal > .item{
+  flex: 1 0 370px;
 }
 .mod-secondary {
   border-top: 2px solid #ced7de;
   padding: 5rem;
-  background: #eee;
   display: flex;
 }
 .mod-principal .hero-unit {
   margin-right: 10%;
-  max-width: 60rem;
+  max-width: 50rem;
 }
 .mod-principal .device {
   min-width: 15rem;
   position: relative;
+  min-height: 520px;
 }
 .device .mobile {
   background: transparent url("../img/mobile.png") no-repeat;
@@ -201,6 +207,8 @@ html {
   background-size: 300px auto;
   position: absolute;
   bottom: 0;
+  left: 50%;
+  margin-left: -150px;
 }
 .device .mobile .screen {
   background: transparent url("../img/mobile-ideas.png") no-repeat;
@@ -308,6 +316,7 @@ h2 {
 }
 .links {
   padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 .links a {
   color: #029DBF;
@@ -315,43 +324,41 @@ h2 {
 }
 
 
-                    @media (max-width: 1366px) {
-                      .login {
-                        width: 70%; }
-                        .login .input-box input {
-                          font-size: 1.25rem; } }
 
-                          @media (max-width: 960px) {
-                            .login {
-                              width: 90%; }
-                              .login h2 {
-                                font-size: 2.375rem;
-                                margin-bottom: 1rem; }
-                                .login h3 {
-                                  font-size: 1.25rem; }
-                                  .login .input-box {
-                                    margin-top: 2rem; }
-                                    .login .input-box input {
-                                      font-size: 1rem;
-                                      width: 60%; }
-                                      .login .input-box button {
-                                        width: 30%; } }
 
-                                        @media (max-width: 480px) {
-                                          .login {
-                                            width: 90%; }
-                                            .login h2 {
-                                              font-size: 1.875rem; }
-                                              .login h3 {
-                                                font-size: 1rem; }
-                                                .login .input-box {
-                                                  -webkit-flex-direction: column;
-                                                  -ms-flex-direction: column;
-                                                  flex-direction: column; }
-                                                  .login .input-box input {
-                                                    font-size: 1rem;
-                                                    width: 100%;
-                                                    margin-bottom: 1rem; }
-                                                    .login .input-box button {
-                                                      width: 100%;
-                                                      margin-left: 0; } }
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+  .mod-principal {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+  .form-box input {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 800px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+  .mod-principal {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+  .form-box input {
+    font-size: 1.4rem;
+  }
+  .mod-principal .hero-unit {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .mod-principal {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .form-box input {
+    font-size: 1rem;
+  }
+}

@@ -11,7 +11,7 @@
      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans"}]]
     [:body
       [:div.mod-principal
-        [:div.hero-unit
+        [:div.item.hero-unit
           [:div.header
             [:span.logo]
             [:h1 "Baoqu"]
@@ -20,10 +20,10 @@
           [:div#form]
           [:div.hint "We are willing to enrole anyone who want to participate in the first test (coming soon), but also people who want to join us developing this."]
           [:div.links
-            [:a.twitter "Twitter"]
-            [:a.github "Github"]
+            [:a.twitter {:href "https://twitter.com/_BaoQu_"} "Twitter"]
+            [:a.github {:href "https://github.com/baoqu"} "Github"]
           ]]
-        [:div.device
+        [:div.item.device
           [:ul.mobile
             [:li.screen.ideas]
             [:li.screen.map]
