@@ -178,8 +178,10 @@ html {
   color: #000;
   background: white;
   display: flex;
+  min-height: 40rem;
 }
 .mod-secondary {
+  border-top: 2px solid #ced7de;
   padding: 5rem;
   background: #eee;
   display: flex;
@@ -190,22 +192,48 @@ html {
 }
 .mod-principal .device {
   min-width: 15rem;
+  position: relative;
 }
 .device .mobile {
   background: transparent url("../img/mobile.png") no-repeat;
   width: 300px;
   height: 520px;
   background-size: 300px auto;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 .device .mobile .screen {
-  background: red url("../img/mobile-ideas.png") no-repeat;
+  background: transparent url("../img/mobile-ideas.png") no-repeat;
   width: 258px;
   height: 430px;
   background-size: 258px 430px;
   position: absolute;
   top: 74px;
   left: 22px;
+  animation: fadeout 18s linear infinite;
+  opacity: 0;
+}
+.device .mobile .screen.comments {
+  background-image: url("../img/mobile-comments.png");
+}
+.device .mobile .screen.map {
+  background-image: url("../img/mobile-map.png");
+}
+.device .mobile .screen:nth-child(1) {
+
+}
+.device .mobile .screen:nth-child(2) {
+  animation-delay: 6s;
+}
+.device .mobile .screen:nth-child(3) {
+  animation-delay: 12s;
+}
+@keyframes fadeout {
+  0%   { opacity: 0; }
+  11.11%   { opacity: 1; }
+  33.33%  { opacity: 1; }
+  44.44%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 /* */
