@@ -16,7 +16,7 @@
 
 (rum/defc mail-form []
   [:div.form-box
-   [:input#mail-input {:placeholder "Leave us your email here"} ]
+   [:input#mail-input {:placeholder "Leave us your email"} ]
    [:button.btn {:on-click say-hi} "Join"]])
 
 (rum/mount (mail-form) (js/document.getElementById "form"))

@@ -31,7 +31,7 @@
             [:li.screen.comments]
           ]]]
       [:div.mod-secondary
-        [:p "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Deliberation trully bottom-up, without moderators or pre-setted agendas in a tool that allows discussion -rather than forms of voting- but still able to produce some output in form of agreement."]
+        [:p.description "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Deliberation trully bottom-up, without moderators or pre-setted agendas in a tool that allows discussion -rather than forms of voting- but still able to produce some output in form of agreement."]
         [:ul.benefits
           [:li.mapping
             [:h3 "Mapping the conversation"]

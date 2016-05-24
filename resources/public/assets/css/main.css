@@ -395,6 +395,10 @@ h2 {
   .mod-principal .hero-unit {
     margin-right: 0;
   }
+  .hint {
+    padding-top: 2rem;
+    font-size: 80%;
+  }
 }
 @media (max-width: 480px) {
   h2 {
@@ -403,11 +407,37 @@ h2 {
   .mod-principal {
     padding: 1rem 1rem 0 1rem;
   }
+  .benefits > li{
+    flex: 1 0 280px;
+    padding: 10rem 1rem 0 1rem;
+  }
+  .mod-principal > .item{
+    flex: 1 0 280px;
+    padding: 10rem 1rem 0 1rem;
+  }
   .footer,
   .mod-secondary {
     padding: 1rem;
   }
   .form-box input {
     font-size: 1rem;
+  }
+  .description {
+    padding-top: 2rem;
+    font-size: 80%;
+  }
+}
+@media (max-width: 360px) {
+  .benefits > li{
+    flex: 1 0 200px;
+    padding: 10rem 0 0 0;
+  }
+  .mod-principal > .item{
+    flex: 1 0 200px;
+    padding: 10rem 0 0 0;
+  }
+  .description {
+    padding-top: 2rem;
+    font-size: 70%;
   }
 }
