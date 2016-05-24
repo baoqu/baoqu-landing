@@ -15,8 +15,11 @@
         (p/then #(println %)))))
 
 (rum/defc mail-form []
-  [:div.form-box
-   [:input#mail-input {:placeholder "Leave us your email"} ]
-   [:button.btn {:on-click say-hi} "Join"]])
+  [:div
+   [:form.form-box {:on-submit say-hi}
+    [:input#mail-input {:placeholder "Leave us your email"}]
+    [:button.btn "Join"]]
+   [:p.success "Mail correctly registered!"]
+   [:p.failuer "An error has occurred!"]])
 
 (rum/mount (mail-form) (js/document.getElementById "form"))
