@@ -15,9 +15,8 @@
 
 (defn new-mail
   [req]
-  {:status 200
-   :headers {"Content-Type" "application/json"}
-   :body (json/encode {:message "Todo OK"})})
+  {:status 201
+   :headers {"Content-Type" "application/json"}})
 
 (def app-routes
   (routes
