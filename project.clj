@@ -9,6 +9,8 @@
                  [ring/ring-json "0.4.0"]
                  [compojure "1.5.0"]
                  [hiccup "1.0.5"]
+                 [com.layerware/hugsql "0.4.7"]
+                 [sqlitejdbc "0.5.6"]
                  ;; ClojureScript
                  [org.clojure/clojurescript "1.8.51"]
                  [rum "0.8.3"]
@@ -17,7 +19,8 @@
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-ring "0.9.7"]]
   :ring {:handler baoqu-landing.core/app
-         :port 3030}
+         :port 3030
+         :init baoqu-landing.core/bootstrap}
   :cljsbuild {:builds
               [{:id "dev"
                 :source-paths ["src-cljs"]
