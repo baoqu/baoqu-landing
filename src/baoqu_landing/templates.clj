@@ -30,19 +30,24 @@
             [:li.screen.comments]
           ]]]
       [:div.mod-secondary
-        [:p "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Yeah, new, belive us."]
+        [:p "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Deliberation trully bottom-up, without moderators or pre-setted agendas in a tool that allows discussion -rather than forms of voting- but still able to produce some output in form of agreement."]
         [:ul.benefits
-          [:li "Mapping the conversation"]
-          [:li "Trolling resilient"]
-          [:li "Open Source"]
+          [:li.mapping
+            [:h3 "Mapping the conversation"]
+            [:p "We map visually the deliberation in a fractal way"]]
+          [:li.trolling
+            [:h3 "Trolling resilient"]
+            [:p "System rules for crosspollination and troll resilience"]]
+          [:li.open
+            [:h3 "Open Source"]
+            [:p "Baoqu is an open initiative being made in an open way"]]
         ]
         [:div#mail-form]]
 
         [:div.footer
-          [:span "Born on a "
+          [:span.copy "Born on a "
             [:a {:href "http://piweek.tumblr.com"} "Piweek"]
-            ", made with &#9829; and Open Source. "
-            [:span "infobaoqu [at] gmail.com. "]
-          ]
+            ", made with &#9829; and Open Source. "]
+          [:span.email "infobaoqu [at] gmail.com. "]
         ]
      [:script {:type "text/javascript" :src "/assets/js/app.js"}]]]))

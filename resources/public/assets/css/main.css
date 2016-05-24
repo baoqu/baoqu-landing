@@ -313,6 +313,29 @@ h2 {
   padding-top: 1rem;
   font-size: 100%;
 }
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits > li{
+  flex: 1 0 370px;
+  padding-top: 10rem;
+  text-align: center;
+}
+.benefits h3{
+  font-size: 110%;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.benefits p{
+  font-size: 90%;
+}
+.benefits > .trolling {
+  background: transparent url("../img/benefit-.png") no-repeat;
+}
+
+
 .links {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -329,6 +352,13 @@ h2 {
 .footer a {
   color: #ced7de;
 }
+.footer .copy {
+  flex: 1;
+  display: block;
+}
+.footer .email {
+  display: block;
+}
 
 
 
@@ -340,6 +370,10 @@ h2 {
   .mod-principal {
     padding: 2.5rem 2.5rem 0 2.5rem;
   }
+  .footer,
+  .mod-secondary {
+    padding: 2.5rem;
+  }
   .form-box input {
     font-size: 1.2rem;
   }
@@ -350,6 +384,10 @@ h2 {
   }
   .mod-principal {
     padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+  .footer,
+  .mod-secondary {
+    padding: 2.5rem;
   }
   .form-box input {
     font-size: 1.4rem;
@@ -364,6 +402,10 @@ h2 {
   }
   .mod-principal {
     padding: 1rem 1rem 0 1rem;
+  }
+  .footer,
+  .mod-secondary {
+    padding: 1rem;
   }
   .form-box input {
     font-size: 1rem;
