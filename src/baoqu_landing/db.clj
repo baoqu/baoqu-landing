@@ -22,7 +22,7 @@
   []
   (sql/db-do-commands db
                       (sql/create-table-ddl :users
-                                            [:id "serial primary key"]
+                                            [:id "integer primary key"]
                                             [:created "date"]
                                             [:mail "varchar unique"])))
 
