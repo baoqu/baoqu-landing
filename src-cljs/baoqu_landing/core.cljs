@@ -8,11 +8,11 @@
 (defn say-hi [e]
   (let [mail-el (js/document.getElementById "mail-input")
         mail (.-value mail-el)]
-    (js/alert (str "Se ha registrado el siguiente correo: " mail))
-;;    (-> (http/send! {:method :get
-;;                     :url "https://seequestor-dev.docker.kaleidos.net/api/"})
-;;        #(p/then (println %) ))
-    ))
+    (-> (http/send! {:method :post
+                     :url "http://localhost:3030/newmail"
+                     :headers {:content-type "application/json"}
+                     :body {:mail mail}})
+        (p/then #(println %)))))
 
 (rum/defc mail-form []
   [:div.form-box
