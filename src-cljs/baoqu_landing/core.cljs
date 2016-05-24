@@ -16,8 +16,11 @@
                      :headers {:content-type "application/json"}
                      :body {:mail mail}})
         (p/then (fn [r]
-                  (println r)
-                  (swap! state assoc :result :success))))))
+                  (if (= 201 (:status r))
+                    (swap! state assoc :result :success)
+                    (do
+                      (swap! state assoc :result :error)
+                      (println r))))))))
 
 (rum/defc mail-form < rum/reactive
   []
