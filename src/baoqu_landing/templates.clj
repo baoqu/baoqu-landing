@@ -8,6 +8,7 @@
     [:head
      [:title "Baoqu"]
      [:meta {:name "viewport" :content "width=device-width, user-scalable=no"}]
+     [:link {:rel "icon" :type "image/png" :href "/assets/img/favicon.png"}]
      [:link {:rel "stylesheet" :href "/assets/css/main.css"}]
      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans"}]]
     [:body
