@@ -7,20 +7,27 @@
 
 (def state (atom {}))
 
+(defn validate-mail
+  [mail]
+  (re-matches #"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" mail))
+
 (defn say-hi [e]
   (.preventDefault e)
   (let [mail-el (js/document.getElementById "mail-input")
-        mail (.-value mail-el)]
-    (-> (http/send! {:method :post
-                     :url "http://localhost:3030/newmail"
-                     :headers {:content-type "application/json"}
-                     :body {:mail mail}})
-        (p/then (fn [r]
-                  (if (= 201 (:status r))
-                    (swap! state assoc :result :success)
-                    (do
-                      (swap! state assoc :result :error)
-                      (println r))))))))
+        mail (.-value mail-el)
+        valid? (validate-mail mail)]
+    (if valid?
+      (-> (http/send! {:method :post
+                       :url "http://localhost:3030/newmail"
+                       :headers {:content-type "application/json"}
+                       :body {:mail mail}})
+          (p/then (fn [r]
+                    (if (= 201 (:status r))
+                      (swap! state assoc :result :success)
+                      (do
+                        (swap! state assoc :result :error)
+                        (println r))))))
+      (swap! state assoc :result :invalid))))
 
 (rum/defc mail-form < rum/reactive
   []
@@ -30,6 +37,7 @@
       [:input#mail-input {:placeholder "Leave us your email"}]
       [:button.btn "Join"]]
      (if (= :success (:result @state)) [:p.success "Mail correctly registered!"])
-     (if (= :error (:result @state)) [:p.failuer "An error has occurred!"])]))
+     (if (= :error (:result @state)) [:p.failuer "An error has occurred!"])
+     (if (= :invalid (:result @state)) [:p.failuer "Please enter an email address"])]))
 
 (rum/mount (mail-form) (js/document.getElementById "form"))
