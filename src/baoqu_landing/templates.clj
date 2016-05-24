@@ -34,12 +34,15 @@
         [:p.description "Baoqu is an online tool for horizontal deliberation in massive groups in a whole new way. Deliberation trully bottom-up, without moderators or pre-setted agendas in a tool that allows discussion -rather than forms of voting- but still able to produce some output in form of agreement."]
         [:ul.benefits
           [:li.mapping
+            [:img.map {:src "/assets/img/benefit-map.png"}]
             [:h3 "Mapping the conversation"]
             [:p "We map visually the deliberation in a fractal way"]]
           [:li.trolling
+            [:img.troll {:src "/assets/img/benefit-troll.png"}]
             [:h3 "Trolling resilient"]
             [:p "System rules for crosspollination and troll resilience"]]
           [:li.open
+            [:img.open {:src "/assets/img/benefit-open.png"}]
             [:h3 "Open Source"]
             [:p "Baoqu is an open initiative being made in an open way"]]
         ]

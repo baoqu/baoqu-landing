@@ -320,8 +320,13 @@ h2 {
 }
 .benefits > li{
   flex: 1 0 370px;
-  padding: 10rem 2.5rem 0 2.5rem;
+  padding: 4rem 2.5rem 0 2.5rem;
   text-align: center;
+}
+.benefits img{
+  opacity: 0.16;
+  width: 100px;
+  margin-bottom: 1.6rem;
 }
 .benefits h3{
   font-size: 110%;
@@ -338,7 +343,7 @@ h2 {
 
 .links {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 .links a {
   color: #029DBF;
@@ -356,6 +361,7 @@ h2 {
   background-color: #29353d;
   padding: 5rem;
   color: #859cad;
+  display: flex;
 }
 .footer a {
   color: #ced7de;
@@ -404,8 +410,11 @@ h2 {
     margin-right: 0;
   }
   .hint {
-    padding-top: 2rem;
-    font-size: 80%;
+    padding-top: 1rem;
+    font-size: 86%;
+  }
+  .footer {
+    display: block;
   }
 }
 @media (max-width: 480px) {
