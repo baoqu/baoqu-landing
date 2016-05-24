@@ -13,7 +13,17 @@ lein cljsbuild auto
 and this to run the server:
 
 ```sh
-lein run
+lein ring server
 ```
 
 go to http://localhost:3030
+
+## Create the standalone jar
+
+To build the standalone jar, just run:
+
+```sh
+lein ring uberjar
+```
+
+The output file will be located in the `target` directory.
