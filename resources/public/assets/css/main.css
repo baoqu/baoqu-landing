@@ -337,6 +337,15 @@ h2 {
   font-size: 110%;
 }
 
+.mod-wide {
+  padding-top: 6rem;
+  background-color: #0290bf;
+  text-align: center;
+}
+.mod-wide img {
+  max-width: 80%;
+}
+
 
 .links {
   padding-top: 2rem;
@@ -456,6 +465,9 @@ h2 {
   .mod-principal .device {
     min-width: 10rem;
     min-height: 420px;
+  }
+  .mod-wide {
+    display: none;
   }
   .device .mobile {
     background-size: 100%;

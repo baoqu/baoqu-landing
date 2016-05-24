@@ -48,7 +48,9 @@
             [:p "Baoqu is an open initiative being made in an open way"]]
         ]
         [:div#mail-form]]
-
+        [:div.mod-wide
+          [:img.open {:src "/assets/img/desktop.png"}]
+        ]
         [:div.footer
           [:span.copy "Powered by "
             [:a {:href "http://piweek.tumblr.com"} "Piweek"]
