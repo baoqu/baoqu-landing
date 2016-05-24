@@ -383,7 +383,9 @@ h2 {
 
 .description {
   font-size: 110%;
-  max-width: 64rem;
+  text-transform: uppercase;
+  color: #859cad;
+  text-align: center;
 }
 
 .footer {
