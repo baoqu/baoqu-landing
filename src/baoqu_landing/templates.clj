@@ -16,7 +16,7 @@
             [:span.logo]
             [:h1 "Baoqu"]
           ]
-          [:h2 "Let's find out the ideas we share, no matter how many we are"]
+          [:h2 "Online deliberation no matter how many we are"]
           [:div#form]
           [:div.hint "We are willing to enrole anyone who want to participate in the first test (coming soon), but also people who want to join us developing this."]
           [:div.links
