@@ -189,7 +189,6 @@ html {
 .mod-secondary {
   border-top: 2px solid #ced7de;
   padding: 5rem;
-  display: flex;
 }
 .mod-principal .hero-unit {
   margin-right: 10%;
@@ -321,6 +320,14 @@ h2 {
 .links a {
   color: #029DBF;
   margin-right: 1rem;
+}
+.footer {
+  background-color: #29353d;
+  padding: 5rem;
+  color: #859cad;
+}
+.footer a {
+  color: #ced7de;
 }
 
 
