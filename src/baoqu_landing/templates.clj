@@ -39,10 +39,10 @@
         [:div#mail-form]]
 
         [:div.footer
-          [:span "infobaoqu [at] gmail.com. "]
           [:span "Born on a "
             [:a {:href "http://piweek.tumblr.com"} "Piweek"]
-            ", made with &#9829; and Open Source."
+            ", made with &#9829; and Open Source. "
+            [:span "infobaoqu [at] gmail.com. "]
           ]
         ]
      [:script {:type "text/javascript" :src "/assets/js/app.js"}]]]))
