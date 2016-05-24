@@ -308,6 +308,18 @@ h2 {
 .form-box .btn:hover {
   background-color: black;
 }
+#form .success {
+  color: #a6be1f;
+  background-color: #ddf3d5;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+#form .failuer {
+  color: #fa5e59;
+  background-color: #f1d1d8;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
 .hint {
   color: #999;
   padding-top: 1rem;
