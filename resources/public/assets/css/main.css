@@ -325,16 +325,16 @@ h2 {
 }
 .benefits img{
   opacity: 0.16;
-  width: 100px;
+  height: 100px;
   margin-bottom: 1.6rem;
 }
 .benefits h3{
-  font-size: 110%;
+  font-size: 130%;
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
 .benefits p{
-  font-size: 90%;
+  font-size: 110%;
 }
 .benefits > .trolling {
   background: transparent url("../img/benefit-.png") no-repeat;
@@ -355,6 +355,11 @@ h2 {
 .links a:hover {
   color: white;
   background-color: #029DBF;
+}
+
+.description {
+  font-size: 110%;
+  max-width: 64rem;
 }
 
 .footer {
@@ -423,19 +428,20 @@ h2 {
   }
   .mod-principal {
     padding: 1rem 1rem 0 1rem;
+    font-size: 100%;
   }
   .benefits > li{
     flex: 1 0 280px;
-    padding: 10rem 1rem 0 1rem;
+    padding: 2rem 0 2rem 0;
   }
   .mod-principal > .item{
     flex: 1 0 280px;
   }
   .footer,
   .mod-secondary {
-    padding: 1rem;
+    padding: 2rem;
   }
-  .description {
+  .ion {
     padding-top: 2rem;
   }
   .form-box input {
@@ -472,7 +478,6 @@ h2 {
 @media (max-width: 360px) {
   .benefits > li{
     flex: 1 0 200px;
-    padding: 10rem 0 0 0;
   }
   .mod-principal > .item{
     flex: 1 0 200px;
