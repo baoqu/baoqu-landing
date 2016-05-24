@@ -17,7 +17,7 @@
             [:span.logo]
             [:h1 "Baoqu"]
           ]
-          [:h2 "Online deliberation no matter how many we are"]
+          [:h2 "Online deliberation for massive groups"]
           [:div#form]
           [:div.hint "We are willing to enrole anyone who want to participate in the first test (coming soon), but also people who want to join us developing this."]
           [:div.links
@@ -46,7 +46,7 @@
         [:div#mail-form]]
 
         [:div.footer
-          [:span.copy "Born on a "
+          [:span.copy "Powered by "
             [:a {:href "http://piweek.tumblr.com"} "Piweek"]
             ", made with &#9829; and Open Source. "]
           [:span.email "infobaoqu [at] gmail.com. "]

@@ -337,13 +337,21 @@ h2 {
 
 
 .links {
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .links a {
   color: #029DBF;
   margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #029DBF;
+  border-radius: 40px;
 }
+.links a:hover {
+  color: white;
+  background-color: #029DBF;
+}
+
 .footer {
   background-color: #29353d;
   padding: 5rem;
@@ -413,19 +421,44 @@ h2 {
   }
   .mod-principal > .item{
     flex: 1 0 280px;
-    padding: 10rem 1rem 0 1rem;
   }
   .footer,
   .mod-secondary {
     padding: 1rem;
   }
-  .form-box input {
-    font-size: 1rem;
-  }
   .description {
     padding-top: 2rem;
-    font-size: 80%;
   }
+  .form-box input {
+    font-size: 1.2rem;
+    padding: 1rem;
+    height: 3.7rem;
+  }
+  .form-box .btn {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.9rem;
+  }
+
+  .mod-principal .device {
+    min-width: 10rem;
+    min-height: 420px;
+  }
+  .device .mobile {
+    background-size: 100%;
+    width: 240px;
+    margin-left: -120px;
+    height: 420px;
+  }
+  .device .mobile .screen {
+    width: 205px;
+    height: 344px;
+    background-size: 100%;
+    top: 60px;
+    left: 18px;
+  }
+
 }
 @media (max-width: 360px) {
   .benefits > li{
@@ -434,10 +467,9 @@ h2 {
   }
   .mod-principal > .item{
     flex: 1 0 200px;
-    padding: 10rem 0 0 0;
   }
   .description {
     padding-top: 2rem;
-    font-size: 70%;
+    font-size: 90%;
   }
 }
