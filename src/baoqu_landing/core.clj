@@ -4,8 +4,7 @@
            [baoqu-landing.templates :as t]
            [baoqu-landing.db :as db]
            [baoqu-landing.configuration :refer [config]]
-           [cheshire.core :as json]
-           [ring.middleware.params :refer [wrap-params]]
+           [ring.middleware.json :refer [wrap-json-body]]
            [ring.adapter.jetty :as jetty])
   (:gen-class))
 
@@ -17,6 +16,8 @@
 
 (defn new-mail
   [req]
+  (let [mail (get-in req [:body "mail"])]
+    (db/create-user mail))
   {:status 201
    :headers {"Content-Type" "application/json"}})
 
@@ -24,11 +25,10 @@
   (routes
    (route/resources "/")
    (GET "/" [] home)
-   (POST "/newmail" [] new-mail)))
+   (POST "/newmail" [] (wrap-json-body new-mail))))
 
 (def app
-  (-> app-routes
-      (wrap-params)))
+  app-routes)
 
 (defn bootstrap
   []
