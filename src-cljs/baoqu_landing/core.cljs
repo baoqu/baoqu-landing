@@ -36,8 +36,8 @@
      [:form.form-box {:on-submit say-hi}
       [:input#mail-input {:placeholder "Leave us your email"}]
       [:button.btn "Join"]]
-     (if (= :success (:result @state)) [:p.success "Mail correctly registered!"])
-     (if (= :error (:result @state)) [:p.failuer "An error has occurred!"])
-     (if (= :invalid (:result @state)) [:p.failuer "Please enter an email address"])]))
+     (if (= :success (:result @state)) [:p.success "Mail correctly registered, we'll keep you posted ;)"])
+     (if (= :error (:result @state)) [:p.failuer "Ouch, an error has occurred :("])
+     (if (= :invalid (:result @state)) [:p.advice "Enter an email address if you wanna have all the fun"])]))
 
 (rum/mount (mail-form) (js/document.getElementById "form"))

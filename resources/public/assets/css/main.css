@@ -320,6 +320,12 @@ h2 {
   padding: 1rem;
   margin-top: 0.5rem;
 }
+#form .advice {
+  color: #FFA500;
+  background-color: #FFF3D5;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
 .hint {
   color: #999;
   padding-top: 1rem;
