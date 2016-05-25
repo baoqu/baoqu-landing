@@ -182,6 +182,7 @@ html {
   flex-wrap: wrap;
   min-height: 40rem;
   background-color: #fff;
+  height: 82%;
 }
 .mod-principal > .item{
   flex: 1 0 370px;
@@ -193,6 +194,7 @@ html {
 .mod-principal .hero-unit {
   margin-right: 10%;
   max-width: 50rem;
+  align-self: center;
 }
 .mod-principal .device {
   min-width: 15rem;
@@ -335,10 +337,11 @@ h2 {
 .benefits {
   display: flex;
   flex-wrap: wrap;
+  padding: 6rem 0 4rem;
 }
 .benefits > li{
   flex: 1 0 370px;
-  padding: 4rem 2.5rem 0 2.5rem;
+  padding: 0 2.5rem;
   text-align: center;
 }
 .benefits img{
@@ -429,6 +432,7 @@ h2 {
   }
   .mod-principal {
     padding: 2.5rem 2.5rem 0 2.5rem;
+    height: auto;
   }
   .footer,
   .mod-secondary {
@@ -447,6 +451,9 @@ h2 {
   .footer {
     display: block;
   }
+  .benefits {
+    padding: 0;
+  }
 }
 @media (max-width: 480px) {
   h2 {
@@ -458,7 +465,7 @@ h2 {
   }
   .benefits > li{
     flex: 1 0 280px;
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0;
   }
   .mod-principal > .item{
     flex: 1 0 280px;
