@@ -2,8 +2,9 @@
   (require [compojure.core :refer :all]
            [compojure.route :as route]
            [baoqu-landing.templates :as t]
-           [cheshire.core :as json]
-           [ring.middleware.params :refer [wrap-params]]
+           [baoqu-landing.db :as db]
+           [baoqu-landing.configuration :refer [config]]
+           [ring.middleware.json :refer [wrap-json-body]]
            [ring.adapter.jetty :as jetty])
   (:gen-class))
 
@@ -15,6 +16,8 @@
 
 (defn new-mail
   [req]
+  (let [mail (get-in req [:body "mail"])]
+    (db/create-user mail))
   {:status 201
    :headers {"Content-Type" "application/json"}})
 
@@ -22,30 +25,22 @@
   (routes
    (route/resources "/")
    (GET "/" [] home)
-   (POST "/newmail" [] new-mail)))
+   (POST "/newmail" [] (wrap-json-body new-mail))))
 
 (def app
-  (-> app-routes
-      (wrap-params)))
+  app-routes)
+
+(defn bootstrap
+  []
+  (if (System/getenv "BL_DEBUG")
+    (do
+      (println "====================")
+      (println "= DEBUG: true")
+      (println "= Config:")
+      (println config)
+      (println "====================")))
+  (db/safely-create-db))
 
 (defn -main
   [& args]
   (jetty/run-jetty app {:port 3030}))
-
-;; (defn new-mail
-;;   [ctx]
-;;   (let [data (:data ctx)]
-;;     (println "Nuevo correo: " data)
-;;     (http/ok (json/encode {:text "ALL GOOD"}) {:content-type "application/json"})))
-
-;; (def app
-;;   (ct/routes [[:any (misc/autoreloader)]
-;;               [:any (parse/body-params)]
-;;               [:all "" #'main-handler]
-;;               [:post "newmail" #'new-mail]
-;;               [:assets "assets" {:dir "public/assets"}]]))
-
-;; (defn -main
-;;   [& args]
-;;   (ct/run-server app {:port 3030
-;;                       :marker-file "basedir-marker"}))

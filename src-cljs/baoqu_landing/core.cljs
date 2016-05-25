@@ -11,6 +11,10 @@
   [mail]
   (re-matches #"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" mail))
 
+(defn map->json
+  [map]
+  (js/JSON.stringify (clj->js map)))
+
 (defn say-hi [e]
   (.preventDefault e)
   (let [mail-el (js/document.getElementById "mail-input")
@@ -20,7 +24,7 @@
       (-> (http/send! {:method :post
                        :url "http://localhost:3030/newmail"
                        :headers {:content-type "application/json"}
-                       :body {:mail mail}})
+                       :body (map->json {:mail mail})})
           (p/then (fn [r]
                     (if (= 201 (:status r))
                       (swap! state assoc :result :success)
