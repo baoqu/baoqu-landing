@@ -54,7 +54,7 @@
         [:div.footer
           [:span.copy "Powered by "
             [:a {:href "http://piweek.tumblr.com"} "Piweek"]
-            ", made with &#9829; and Open Source. "]
-          [:span.email "infobaoqu [at] gmail.com. "]
+            ", made with &#9829; and Open Source"]
+          [:span.email "infobaoqu [at] gmail.com"]
         ]
      [:script {:type "text/javascript" :src "/assets/js/app.js"}]]]))
