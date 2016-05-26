@@ -182,7 +182,7 @@ html {
   flex-wrap: wrap;
   min-height: 40rem;
   background-color: #fff;
-  height: 82%;
+  /* height: 82%; */
 }
 .mod-principal > .item{
   flex: 1 0 370px;
