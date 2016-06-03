@@ -1,6 +1,14 @@
 (ns baoqu-landing.templates
   (require [hiccup.core :refer [html]]))
 
+(def google-analytics-string
+  "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7259258-6', 'auto');
+    ga('send', 'pageview');")
+
 (defn landing
   []
   (html
@@ -57,4 +65,5 @@
             ", made with &#9829; and Open Source"]
           [:span.email "infobaoqu [at] gmail.com"]
         ]
-     [:script {:type "text/javascript" :src "/assets/js/app.js"}]]]))
+     [:script {:type "text/javascript" :src "/assets/js/app.js"}]
+     [:script google-analytics-string]]]))
