@@ -7,13 +7,13 @@ This is the landing page of the Baoqu project
 Clone the repository and inside its folder, run this to start watching the `ClojureScript` code:
 
 ```sh
-lein cljsbuild auto
+make start-front
 ```
 
 and this to run the server:
 
 ```sh
-lein ring server
+make start-back
 ```
 
 go to http://localhost:3030
@@ -23,7 +23,13 @@ go to http://localhost:3030
 To build the standalone jar, just run:
 
 ```sh
-lein ring uberjar
+make uberjar
 ```
 
 The output file will be located in the `target` directory.
+
+## Generate the docker image
+
+```sh
+make docker
+```

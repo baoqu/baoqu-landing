@@ -17,7 +17,7 @@
                  [funcool/httpurr "0.6.0"]]
   :main baoqu-landing.core
   :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-ring "0.9.7"]]
+            [lein-ring "0.12.5"]]
   :ring {:handler baoqu-landing.core/app
          :port 3030
          :init baoqu-landing.core/bootstrap}
